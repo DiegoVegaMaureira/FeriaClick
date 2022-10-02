@@ -1,5 +1,3 @@
-
-
 function login(form) {
     var un = form.Username.value;
     var pw = form.Password.value;
@@ -11,13 +9,6 @@ function login(form) {
         }
     }
 }
-
-window.addEventListener(window,"load", function() {
-    var loginForm = document.getElementById("LoginForm");
-    window.addEventListener(loginForm, "submit", function() {
-         login(loginForm);
-     });
- });
 
  function loginResults() {
     var loggedIn = document.getElementById("LoggedIn");
@@ -35,3 +26,7 @@ window.addEventListener(window,"load", function() {
         }, 3000);
     }
 }
+
+$(document).ready(function() {
+    $("#basic-form").validate();
+});
